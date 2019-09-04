@@ -1,176 +1,184 @@
-
 <!DOCTYPE html>
-<html manifest="cache.appcache">
- <head>
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" />
-  <script>var _hmt=_hmt||[];(function(){var hm=document.createElement("script");hm.src="//hm.baidu.com/hm.js?b169f904ade5ef8ef30b1f93eb03f0ef";var s=document.getElementsByTagName("script")[0];s.parentNode.insertBefore(hm,s)})();</script>
-  <meta name="renderer" content="webkit" />
-  <title>快搜 - 搜索快人一步</title>
-  <meta name="keywords" content="快搜,虫部落快搜,聚合搜索引擎,搜索快人一步,虫子" />
-  <meta name="description" content="快搜！虫部落全网独家首发出品！为你聚合Google,百度,必应等国内外综合搜索和学术,资源,专业领域知识等垂直搜索。精准搜索,便捷交互！是你的网络搜索第一站！" />
-  <meta name="revised" content="Chong, 2015/10/11/" />
-  <meta name="author" content="chongbuluo.com" />
-  <link rel="shortcut icon" href="/favicon.ico" /> 
-  <script type="text/javascript" src="https://cdn.staticfile.org/jquery/3.3.1/jquery.min.js"></script>
-  <script src="https://lib.sinaapp.com/js/jquery-ui/1.10.2/jquery-ui.min.js"></script>
-  <link rel="stylesheet" href="https://search.chongbuluo.com/font-awesome/css/font-awesome.min.css">
-  <link rel="stylesheet" href="https://search.chongbuluo.com/jquery.mCustomScrollbar.css" />
-  <link rel="stylesheet" type="text/css" href="easy.css"/>
-  <script src="config.js" type="text/javascript" charset="utf-8"></script>
-  </head> 
- <body>
-  <script type="text/javascript">
-    if(localStorage.style === 'icon') {
-      $(document.body).addClass('icon-style');
-    }
-  </script>
-  <div id="nav">
-   <ul id="skin-nav">
-    <li><a href="https://search.chongbuluo.com/" title="虫部落快搜" class="logo"><img src="images/logo_search.svg"/></a></li>
-    <li><a href="https://www.chongbuluo.com/" title="虫部落社区" target="_blank"><i style="color:#e18600" class="fa fa-key"></i> 虫部落社区</a></li>
-  <li><a href="https://www.chongbuluo.com/forum.php?mod=viewthread&tid=344" target="_blank"><i style="color:#F44336;" class="fa fa-heart"></i> 大感谢</a></li>
-    <li><a href="https://www.chongbuluo.com/forum.php?mod=viewthread&tid=322" target="_blank"><i style="color:#2f83fc;font-size:15px" class="fa fa-cog"></i> 设置</a></li>
-    <li><a href="https://scholar.chongbuluo.com/" target="_blank"><i style="color:#e18600" class="fa fa-mortar-board"></i> 学术搜索</a></li>
-    <li><a href="https://ebook.chongbuluo.com/" target="_blank"><i style="color:#F44336" class="fa fa-book"></i> 电子书搜索</a></li>
-    <li><a href="http://image.chongbuluo.com/" target="_blank"><i style="color:#2f83fc" class="fa fa-picture-o"></i> 图片搜索</a></li>
-  <li><a href="http://magnet.chongbuluo.com/" target="_blank"><i style="color:#e18600" class="fa fa-cloud-download"></i> 资源搜索</a></li>
-  <li><a href="https://www.chongbuluo.com/forum.php?mod=viewthread&tid=599" target="_blank"><i style="color:#589BFF;font-size:14px" class="fa fa-refresh fa-spin"></i> 更新存档</a></li>
-    <li id="skin"><i style="color:#F44336" class="fa fa-leaf"></i> 皮肤
-     <ul id="skin-subnav">
-      <li><a href="images/grey.gif">纯灰</a></li>
-      <li><a href="https://ww2.sinaimg.cn/large/b1601727gw1f0yog91237j205k05ka9z.jpg">默认</a></li>
-      <li><a href="https://ww2.sinaimg.cn/large/b1601727gw1f0ypz5sqeog203k03kt8l.gif">流水</a></li>
-      <li><a href="https://ww1.sinaimg.cn/large/b1601727gw1f0yog7wy6gj20go0goaar.jpg">晶体</a></li>
-      <li><a href="https://ww4.sinaimg.cn/large/b1601727gw1f0yogbxosbj20e80e8ta1.jpg">木纹</a></li>
-      <li><a href="https://ww2.sinaimg.cn/large/b1601727gw1f0yog9rt8jj20dw0afwg2.jpg">宣纸</a></li>
-      <li><a href="https://ww3.sinaimg.cn/large/b1601727gw1f0ypz6et0vj205804jglg.jpg">爱心</a></li>
-      <li><a href="https://ww1.sinaimg.cn/large/b1601727gw1f0ypz5y1g5g204102wa9z.gif">墙壁</a></li>
-      <li><a href="https://ww1.sinaimg.cn/large/b1601727gw1f0yogc8nydj208c08c3yc.jpg">知识</a></li>
-      <li><a href="https://ww4.sinaimg.cn/large/b1601727gw1f0yogacp89j20b40b7mxm.jpg">妖娆</a></li>
-     </ul></li>
-   </ul>
-  </div>
-  <div class="container">
-   <div class="left-nav">
-    <ul id="foo" class="chongbuluo">
-   <li id="google"><img src="/images/google.ico" /><a data="https://search.chongbuluo.com/iGoogle.html">Google</a></li>
-   <li id="baidu"><img src="/images/baidu.ico" /><a data="https://www.baidu.com/">百度</a></li>
-   <li id="cnbing"><img src="/images/bing.ico" /><a data="https://cn.bing.com/">必应</a></li>
-   <li id="miji"><img src="/images/miji.png" /><a data="https://mijisou.com/">秘迹搜索</a></li>
-   <li id="wikipedia"><img src="/images/wikipedia.png" /><a data="https://search.chongbuluo.com/wiki.html">Wikipedia</a></li>
-   <li id="google_advanced"><img src="/images/google.ico" /><a data="https://search.chongbuluo.com/advanced_search.html">谷歌高级</a></li>
-   <li id="baidu_advanced"><img src="/images/baidu.ico" /><a data="https://search.chongbuluo.com/baidu_advanced.html">百度高级</a></li>
-   <li id="sogou_advanced"><img src="/images/sogou.ico" /><a data="https://search.chongbuluo.com/sogou_advanced.html">搜狗高级</a></li>
-   <li id="music"><img src="/images/163.ico" /><a data="https://www.chongbuluo.com/music.html">音乐</a></li>
-   <li id="taobao"><img src="/images/taobao.png" /><a data="https://www.chongbuluo.com/shopping.html">购物</a></li>
-   <li id="weibo"><img src="/images/weibo.ico" /><a data="https://www.chongbuluo.com/weibo.html">微博搜索</a></li>
-   <li id="wechat"><img src="/images/weixin.ico" /><a data="https://www.chongbuluo.com/weixin.html">搜狗微信</a></li>
-   <li id="zhihu"><img src="/images/zhihu.ico" /><a data="https://zhihu.sogou.com/">搜狗知乎</a></li>
-   <li id="map"><img src="/images/map.png"><a>地图</a>
-    <ul class="more">
-      <li id="amap"><img src="/images/amap.jpg"><a data="https://ditu.amap.com/">高德地图</a></li>
-      <li id="baidumap"><img src="/images/baidu.ico"><a data="https://map.baidu.com/">百度地图</a></li>
-      <li id="googlemap"><img src="/images/googlemap.ico"><a data="https://www.google.cn/maps/" target="_blank">谷歌地图</a></li>
-      <li id="tencentmap"><img src="/images/tencentmap.ico"><a data="https://map.qq.com/">腾讯地图</a></li>
-      <li id="sogoumap"><img src="/images/sogou.ico"><a data="https://map.sogou.com">搜狗地图</a></li>
-      <li id="bingmap"><img src="/images/bing.ico"><a data="https://cn.bing.com/ditu/">必应地图</a></li>
-    </ul>
-   </li>
-   <li id="trip"><img src="/images/trip.png"><a>旅游</a>
-    <ul class="more">
-      <li id="mafengwo"><img src="/images/mafengwo.ico"><a data="https://www.mafengwo.cn/">蚂蜂窝</a></li>
-      <li id="qyer"><img src="/images/qyer.ico"><a data="https://www.qyer.com/">穷游</a></li>
-      <li id="tripadvisor"><img src="/images/tripadvisor.ico"><a data="https://www.tripadvisor.cn/">猫途鹰</a></li>
-      <li id="booking"><img src="/images/booking.ico"><a data="https://www.booking.com/destinationfinder.zh-cn.html">缤客</a></li>
-      <li id="lotour"><img src="/images/lotour.ico"><a data="https://www.lotour.com/">乐途</a></li>
-      <li id="airbnb"><img src="/images/airbnb.ico"><a data="https://zh.airbnb.com/" target="_blank">爱彼迎</a></li>
-      <li id="tuniu"><img src="/images/tuniu.ico"><a data="https://s.tuniu.com/">途牛</a></li>
-    </ul>
-   </li>
-   <li id="mao"><img src="/images/cilimao.ico" /><a data="https://www.cilimao.at">磁力猫</a></li>
-   <li id="lanzou"><img src="/images/lanzou.ico" /><a data="https://www.chongbuluo.com/lanzou.html">蓝奏云</a></li>
-   <li id="easyicon"><img src="/images/easyicon.ico" /><a data="https://www.easyicon.net/">图标</a></li>
-   <li id="gif"><img src="/images/soogif.ico" /><a data="https://www.soogif.com/">GIF动图</a></li>
-   <li id="jiumodiary"><img src="/images/jiumodiary.png" /><a data="https://www.jiumodiary.com/">电子书</a></li>
-   <li id="lib"><img src="/images/e-book.png" /><a data="https://www.chongbuluo.com/book.html">英文电子书</a></li>
-   <li id="github"><img src="/images/github.ico" /><a data="https://www.chongbuluo.com/github.html">GitHub</a></li>
-   <li id="open"><img src="/images/kaiyuan.ico" /><a data="https://www.openhub.net/">开源代码</a></li>
-   <li id="wolf"><img src="/images/wolframalpha.ico" /><a data="https://www.wolframalpha.com/">Wolfram Alpha</a></li>
-   <li id="index"><img src="/images/google.ico" /><a data="https://www.chongbuluo.com/index-search/index.html">索引搜索</a></li>
-   <li id="kuaidi"><img src="/images/kuaidi.ico" /><a data="https://www.kuaidi100.com/">快递</a></li>
-   <li id="gepu"><img src="/images/zhaogepu.ico" /><a data="https://www.zhaogepu.com/">找歌谱</a></li>
-   <li id="bilibili"><img src="/images/bilibili.ico" /><a data="https://search.bilibili.com/">哔哩哔哩</a></li>
-   <li id="nyaso"><img src="/images/nyaso.ico" /><a data="https://nyaa.si/">动漫资源</a></li>
-   <li id="kisssub"><img src="/images/kisssub.ico" /><a data="https://www.kisssub.org/">动漫 BT</a></li>
-   <li id="acgsou"><img src="/images/acg.ico" /><a data="https://www.acgsou.com/">ACG搜</a></li>
-   <li id="qichacha"><img src="/images/qichacha.png" /><a data="https://www.qichacha.com/">查企业</a></li>
-   <li id="baidushitu"><img src="/images/baidu.ico" /><a data="https://stu.baidu.com/">百度识图</a></li>
-   <li id="font"><img src="/images/qiuziti.ico" /><a data="https://www.likefont.com/">字体识别</a></li>
-   <li id="visualhunt"><img src="/images/visualhunt.ico" /><a data="https://visualhunt.com/">Visual Hunt</a></li>
-   <li id="mba"><img src="/images/mbalib.ico" /><a data="https://www.mbalib.com/">MBA智库</a></li>
-   <li id="makedie"><img src="/images/zimu.ico" /><a data="https://assrt.net/">字幕反向搜索</a></li>
-   <li id="drugs"><img src="/images/drug.ico" /><a data="https://search.chongbuluo.com/drugs.html" target="_blank">用药助手</a></li>
-   <li id="innojoy"><img src="/images/patMain.ico" /><a data="https://www.innojoy.com/search/index.shtml">专利检索</a></li>
-   <li id="chashenjia"><img src="/images/soccer.ico" /><a data="https://www.chongbuluo.com/price.html">查身价</a></li>
-    </ul>
-    <script type="text/javascript">
-      var c = localStorage.content;
-      if(c) {
-        $("#foo")[0].innerHTML = c;
-      }
-    </script>
-    <script src="https://search.chongbuluo.com/jquery.mCustomScrollbar.concat.min.js"></script>
-    <script>$(".left-nav").mCustomScrollbar({theme:"minimal-dark"});</script>
-   </div>
-   <div class="main">
-    <iframe id="engine" name="engine" frameborder="0" marginwidth="0" marginheight="0" allowtransparency="true" style="background-color:#fff"></iframe>
-   </div>
-  </div>
-  <div class="footer">
-   <a href="https://www.chongbuluo.com/" target="_blank">虫部落出品</a>
-   <span>&copy; 2013-2019 Chongbuluo</span>
-   <a href="http://www.miibeian.gov.cn/" target="_blank">陕ICP备14001577-1</a>
-   <a href="https://www.chongbuluo.com/blog-4-178.html" title="联系我们" target="_blank">联系我们</a>
-   <a href="https://www.chongbuluo.com/blog-4-858.html" title="About chongbuluo - 关于虫部落" target="_blank">关于虫部落</a>
-   <a href="https://www.chongbuluo.com/thread-4940-1-1.html" title="从零到百 · 搜索达人是这样炼成的" target="_blank">搜索教程</a>
-   <a href="http://code.giffox.com/" title="程序员导航" target="_blank">程序员导航</a>
-   <a href="https://www.giffox.com/" title="老司机导航" target="_blank">老司机导航</a>
-  </div>
-  <link href="https://search.chongbuluo.com/csshake.min.css" rel="stylesheet"/>
-  <link rel="stylesheet" type="text/css" href="https://search.chongbuluo.com/ui-dialog.css"/>
-  <script src="https://search.chongbuluo.com/dialog-min.js" type="text/javascript" charset="utf-8"></script>
-  <link rel="stylesheet" type="text/css" href="https://search.chongbuluo.com/messenger.css"/>
-  <link rel="stylesheet" type="text/css" href="https://search.chongbuluo.com/messenger-theme-ice.css"/>
-  <script src="https://search.chongbuluo.com/messenger.min.js" type="text/javascript" charset="utf-8"></script>
-  <script src="color.js"></script>
-  <script type="text/javascript">         
-            window.onload=function () {
-                      function _GetUrlParams() {
-                var url = location.search; //获取url中"?"符后的字串
-                var theRequest = {};
-                if (url.indexOf("?") != -1) {
-                    var str = url.substr(1);
-                    strs = str.split("&");
-                    for (var i = 0; i < strs.length; i++) {
-                        //console.log(strs[i]);
-                        theRequest[strs[i].split("=")[0]] = unescape(strs[i].split("=")[1]);
-                    }
-                }
-                return theRequest;
-            }
-            var obj = _GetUrlParams();
-            if(obj.q){
-              var bingurl=obj.q;
-        document.getElementById('engine').src = 'https://cn.bing.com/search?q=' + escape(bingurl);
-         $("#cnbing").addClass("on");
-         $("#google").removeClass("on");
-        //console.log(bingurl);
+<style>
+    
+    *
+{
+	margin:0;
+	padding:0;
+	
+	}
+	div
+	{background:#FFF;
+        
         }
-            }
-            </script>
- <!--放下偷刀(盗)，立地成佛；尊重原作者的劳动成果也是对您自身人格的尊重-->
- <!--今后凡以任何形式盗取或变相盗取本站程序者，我随即会直接将你本人的所有私人信息公开到网络上！2016.11.01虫子宣-->
- </body>
+#containter
+{
+	margin:0 auto;
+	width:100%;
+	height:100%;
+}
+
+
+
+
+
+
+
+#win
+{
+	width: 300px;
+	margin-right:0px ;
+	margin-top:30px ;
+	height:50px;
+	float: right;
+	
+	}
+
+
+
+
+#menu
+{
+	
+	float:left;
+	
+	width:60%;
+	margin-left:160px;
+	}
+
+	
+
+#zhong
+{
+	margin:0 auto;
+	width:900px;
+	}
+nav
+{
+ position:absolute;
+ overflow: hidden;
+ text-overflow: ellipsis;
+ white-space: nowrap;	
+ 
+	}
+#nav li{
+	display: block;
+	line-height: 25px;
+	float:left;
+	margin:50px auto 0 auto;
+	width: 150px;
+	
+	height: 50px; 
+	 overflow: hidden;
+		
+
+  
+}
+
+#nav a
+{
+	
+font-size: 23px;
+font-family: '微软雅黑';
+color: #000;
+text-decoration: none;
+display: block;
+width: 150px;
+height: 50px;
+text-align: center;
+
+}
+#a1 a{
+	background: url(../images/beijing2.png)no-repeat;
+
+font-size: 26px;
+font-family: '微软雅黑';
+color: rgb(0,160,234);
+	
+	}
+#nav a:hover
+{
+
+background: url(../images/beijing2.png)no-repeat;
+
+font-size: 26px;
+font-family: '微软雅黑';
+color: rgb(0,160,234);
+
+
+}
+#main
+{
+	margin:auto auto;
+	width:1510px;
+	height:720px;
+	}
+    .qdxw{ margin:0;float:left;margin-left: -4px; height: 100%;}  
+    .qdxw ul a{font-family: '微软雅黑';font-size: 20px;color: #fff;text-decoration: none;}  
+    .qdxw ul a:hover{color: #fff;text-decoration: none;}  
+    .li1{width: 200px;height: 60px;line-height: 60px;text-align:left;position: relative;}  
+    .li2{text-align:left;}
+    
+    .qdxw ul li:hover{background:rgb(135, 206, 235);}  
+    .li1 a{width: 200px;height: 60px;display: block; }
+    .qdxw ul li a:focus{background:rgb(135, 206, 235);outline: 0}
+    .qdxw ul{width: 200px;height:100%;position:relative;background:rgb(140,152,204);list-style: none;}    
+  
+    .qdxw ul.nav2{left: 200px;top:-60px;display: none;width: 130px;height:180px;}   
+    .qdxw .nav1 .li1:hover ul.nav2{display: block;background: rgb(203,207,232);color:rgb(0,160,234);}  
+    .qdxw .nav1 .li1:hover ul.nav2.li{color: rgb(203,207,232);background: rgb(203,107,232);}
+	#frame{float:left;width:1310px;height:720px}
+
+#frame1{width:100%;height:100%;background:#87CEEB;background-size: 100% 100%;border: 0;}
+
+</style>
+</head>
+<body>
+
+    
+        
+<div id="containter">
+	
+	
+    
+    
+    <div id="main">
+        <div class="qdxw">  
+          <ul class="nav1">  
+               	<li  class="li1"  ><a  tabindex="1"  href="https://www.9178.work/index.html" target="j">&emsp;&emsp;&emsp;沃克导航</a>
+            </li>
+                <li class="li1"><a  tabindex="1"  href="https://www.lsdhss.com/" target="j">&emsp;&emsp;&emsp;猎手导航</a>  
+                   
+              </li> 
+			  <li class="li1"><a  tabindex="1"  href="https://hao.uisdc.com" target="j">&emsp;&emsp;&emsp;优设导航</a>  
+                   
+              </li> 
+                   
+		    
+			 
+		
+	
+			<li  class="li1"  ><a  tabindex="1"  href="https://www.tool2.cn/#daohangtxPc" target="j">&emsp;&emsp;&emsp;在线工具</a>
+            </li>
+                
+             
+          </ul>  
+        </div> 
+        <div id="frame">
+            <iframe id="frame1"  src="https://www.9178.work/index.html"    name="j">
+                
+      
+        
+       
+            </iframe>
+        
+        </div> 
+  
+    
+	</div>
+    
+   
+</div>
+    
+</body>
 </html>
